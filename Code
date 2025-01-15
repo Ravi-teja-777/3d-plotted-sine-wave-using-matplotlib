@@ -1,0 +1,15 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.arange(-5,5,1)
+y = np.arange(-5,5,1)
+ 
+x,y = np.meshgrid(x,y)
+
+z = np.sin(x* np.pi/2)
+
+fig = plt.figure()
+ax = fig.gca(projection="3d")
+
+ax.plot_wireframe(x,y,z)
+plt.show()
